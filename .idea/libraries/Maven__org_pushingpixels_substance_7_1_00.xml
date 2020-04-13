@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.pushingpixels:substance:7.1.00">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/pushingpixels/substance/7.1.00/substance-7.1.00.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/pushingpixels/substance/7.1.00/substance-7.1.00-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/pushingpixels/substance/7.1.00/substance-7.1.00-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
