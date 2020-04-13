@@ -1,2 +1,2 @@
 # ATSAutoPOS
-Customized Unicent POS for ATS Auto
+Customized Unicenta POS for ATS Auto
