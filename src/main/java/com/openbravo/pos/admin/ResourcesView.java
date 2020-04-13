@@ -37,6 +37,7 @@ import java.util.UUID;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 
+import com.openbravo.pos.admin.TextLineNumber;
 /**
  *
  * @author adrianromero
@@ -265,6 +266,9 @@ public final class ResourcesView extends JPanel implements EditorRecord {
 
         m_jText.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(m_jText);
+        TextLineNumber tln = new TextLineNumber(m_jText);
+
+        jScrollPane1.setRowHeaderView(tln);
 
         m_jContainer.add(jScrollPane1, "text");
         m_jContainer.add(jPanel1, "null");

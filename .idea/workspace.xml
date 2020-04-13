@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a1f90d3-6b45-4a6e-a183-1c6e704855b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/catalog/JCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/catalog/JCatalog.java" afterDir="false" />
+    <list default="true" id="1a1f90d3-6b45-4a6e-a183-1c6e704855b7" name="Default Changelist" comment="Added line numbers to resources text editor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/admin/TextLineNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/admin/ResourcesView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/admin/ResourcesView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/admin/ResourcesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/admin/ResourcesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/admin/ResourcesView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/admin/ResourcesView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/admin/ResourcesView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/admin/ResourcesView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/admin/ResourcesView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/admin/ResourcesView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/payment/PaymentGatewayPaymentSense.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/payment/PaymentGatewayPaymentSense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/payment/PaymentGatewayVantiv.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/payment/PaymentGatewayVantiv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unicentaopos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/unicentaopos.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,36 +71,65 @@
       <option name="presentableId" value="Default" />
       <updated>1584711035445</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changed Size of Buttons on stock screen">
+      <created>1586771031844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586771031844</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed Size of Buttons on stock screen" />
+    <MESSAGE value="Added line numbers to resources text editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added line numbers to resources text editor" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="98" width="912" height="916" key="CommitChangelistDialog2" timestamp="1586795583189">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="499" y="98" width="912" height="916" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1586795583189" />
     <state x="582" y="302" width="735" height="527" key="FileChooserDialogImpl" timestamp="1584714202448">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
     <state x="582" y="302" width="735" height="527" key="FileChooserDialogImpl/0.32.1920.1048@0.32.1920.1048" timestamp="1584714202448" />
-    <state width="1874" height="274" key="GridCell.Tab.0.bottom" timestamp="1584762062608">
-      <screen x="0" y="32" width="1920" height="1048" />
+    <state width="1874" height="195" key="GridCell.Tab.0.bottom" timestamp="1586795583300">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
+    <state width="1874" height="195" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1586795583300" />
     <state width="1874" height="274" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062608" />
-    <state width="1874" height="274" key="GridCell.Tab.0.center" timestamp="1584762062608">
-      <screen x="0" y="32" width="1920" height="1048" />
+    <state width="1874" height="195" key="GridCell.Tab.0.center" timestamp="1586795583299">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
+    <state width="1874" height="195" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1586795583299" />
     <state width="1874" height="274" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062608" />
-    <state width="1874" height="274" key="GridCell.Tab.0.left" timestamp="1584762062607">
-      <screen x="0" y="32" width="1920" height="1048" />
+    <state width="1874" height="195" key="GridCell.Tab.0.left" timestamp="1586795583299">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
+    <state width="1874" height="195" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1586795583299" />
     <state width="1874" height="274" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062607" />
-    <state width="1874" height="274" key="GridCell.Tab.0.right" timestamp="1584762062608">
-      <screen x="0" y="32" width="1920" height="1048" />
+    <state width="1874" height="195" key="GridCell.Tab.0.right" timestamp="1586795583299">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
+    <state width="1874" height="195" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1586795583299" />
     <state width="1874" height="274" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062608" />
     <state x="443" y="133" width="1024" height="852" key="SettingsEditor" timestamp="1584714228060">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
     <state x="443" y="133" width="1024" height="852" key="SettingsEditor/0.32.1920.1048@0.32.1920.1048" timestamp="1584714228060" />
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1586771106924">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1586771106924" />
     <state x="616" y="383" key="com.intellij.ide.util.TipDialog" timestamp="1584714027891">
       <screen x="0" y="32" width="1920" height="1048" />
     </state>
     <state x="616" y="383" key="com.intellij.ide.util.TipDialog/0.32.1920.1048@0.32.1920.1048" timestamp="1584714027891" />
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1586793536399">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="258" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1586793536399" />
   </component>
 </project>
