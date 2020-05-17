@@ -72,6 +72,10 @@ import java.io.ObjectInputStream;
 import java.util.*;
 
 import static java.awt.Window.getWindows;
+import java.io.ByteArrayInputStream;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 
 /**
@@ -1991,6 +1995,69 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
     NotificationManager.showNotification(notification);
     clock.start();
   }
+  
+  private void printJasperTicket(String resourceName, TicketInfo ticket){
+
+    //debug
+    for(int i = 0; i <  ticket.getLinesCount(); i++){
+      TicketLineInfo line = ticket.getLine(i);
+      log.info("Product: " + line.getProductName());
+    }
+
+    try {
+
+      JasperReport jr;
+
+      InputStream jasperDef = new ByteArrayInputStream(dlSystem.getResourceAsXML(resourceName).getBytes());
+      JasperDesign jd = JRXmlLoader.load(jasperDef);
+      jr = JasperCompileManager.compileReport(jd);
+
+      Map reportparams = new HashMap();
+      JasperPrint jp;
+
+      if(ticket.getLinesCount() < 1){
+        java.awt.Toolkit.getDefaultToolkit().beep();
+        return;
+      }
+
+      java.util.List<TicketLineInfoBean> lines = new ArrayList<>();
+
+      for(int i = 0; i < ticket.getLinesCount(); i++){
+        if("".equals(ticket.getLine(i).getProperty("isDiscountLine", ""))) {
+          TicketLineInfoBean bean = new TicketLineInfoBean(ticket.getLine(i));
+          lines.add(bean);
+        }
+      }
+
+      JRBeanCollectionDataSource ticketlines = new JRBeanCollectionDataSource(lines);
+
+      //get company logo from resources
+      Image logo = dlSystem.getResourceAsImage("Printer.Invoice.Logo");
+      
+      //invoice id based on timestamp
+      DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyMMddHHmmss");
+      LocalDateTime now = LocalDateTime.now();
+      String invoiceID = dtf.format(now);
+      
+      
+      //add parameters
+      reportparams.put("TICKET", ticket);
+      reportparams.put("logo", logo);
+      reportparams.put("invoice_id", invoiceID);
+
+      jp = JasperFillManager.fillReport(jr, reportparams, ticketlines);
+
+      PrintService service = ReportUtils.getPrintService(m_App.getProperties().getProperty("machine.printername"));
+
+      JRPrinterAWT300.printPages(jp, 0, jp.getPages().size() - 1, service);
+
+    } catch (JRException e) {
+      MessageInf msg = new MessageInf(MessageInf.SGN_WARNING, AppLocal.getIntString("message.cannotloadreport"), e);
+      msg.show(this);
+    }
+
+
+  }
 
   private void printReport(String resourcefile, TicketInfo ticket, Object ticketext) {
 
@@ -2294,7 +2361,12 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
     public void printReport(String resourcefile) {
       JPanelTicket.this.printReport(resourcefile, ticket, ticketext);
     }
-
+    
+    //custom script method to print Jasper Invoice
+    public void printJasperTicket(String resourcefile){
+        JPanelTicket.this.printJasperTicket(resourcefile, ticket);
+    }
+    
     /**
      * @param sresourcename
      */

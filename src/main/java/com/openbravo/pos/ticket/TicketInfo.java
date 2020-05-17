@@ -177,7 +177,7 @@ public final class TicketInfo implements SerializableRead, Externalizable {
      * @return
      */
     public TicketInfo copyTicket() {
-        TicketInfo t = new TicketInfo();
+       TicketInfo t = new TicketInfo();
 
         t.tickettype = tickettype;
         t.m_iTicketId = m_iTicketId;
@@ -188,20 +188,23 @@ public final class TicketInfo implements SerializableRead, Externalizable {
         t.m_Customer = m_Customer;
 
         t.m_aLines = new ArrayList<>(); // JG June 2102 diamond inference
-        m_aLines.forEach((l) -> {
+       
+        for (TicketLineInfo l : m_aLines) {
             t.m_aLines.add(l.copyTicketLine());
-        });
+        }
         t.refreshLines();
 
         t.payments = new LinkedList<>(); // JG June 2102 diamond inference
-        payments.forEach((p) -> {
+
+        for (PaymentInfo p : payments) {
             t.payments.add(p.copyPayment());
-        });
+        }
+
         t.oldTicket=oldTicket;
         // taxes are not copied, must be calculated again.
 
         t.ticketstatus = ticketstatus;
-        
+
         return t;
     }
 
@@ -402,26 +405,29 @@ public final class TicketInfo implements SerializableRead, Externalizable {
     }
 
     public double getSubTotal() {
-        double sum = 0.0;
-        sum = m_aLines.stream().map((line) -> 
-                line.getSubValue()).reduce(sum, (accumulator, _item) -> 
-                        accumulator + _item);
+       double sum = 0.0;
+        for (TicketLineInfo line : m_aLines) {
+            sum += line.getSubValue();
+        }
         return sum;
     }
 
     public double getTax() {
 
-        double sum = 0.0;
+       double sum = 0.0;
         if (hasTaxesCalculated()) {
             for (TicketTaxInfo tax : taxes) {
                 sum += tax.getTax(); // Taxes are already rounded...
-                nsum = sum;
+            nsum = sum;
+        }
+            for (TicketLineInfo line : m_aLines) {
+                sum += line.getTax();
             }
         } else {
-            sum = m_aLines.stream().map((line) -> 
-                    line.getTax()).reduce(sum, (accumulator, _item) -> 
-                            accumulator + _item);
+            for (TicketLineInfo line : m_aLines) {
+                sum += line.getTax();
             }
+        }
         return sum;
     }
 
@@ -436,13 +442,14 @@ public final class TicketInfo implements SerializableRead, Externalizable {
     }
     
     public double getTotalPaid() {
-        double sum = 0.0;
-        sum = payments.stream().filter((p) -> 
-                (!"debtpaid".equals(p.getName()))).map((p) -> 
-                        p.getTotal()).reduce(sum, (accumulator, _item) -> 
-                                accumulator + _item);
+       double sum = 0.0;
+        for (PaymentInfo p : payments) {
+            if (!"debtpaid".equals(p.getName())) {
+                sum += p.getTotal();
+            }
+        }
         return sum;
-          }
+    }
 
     public double getTendered() {
         return getTotalPaid();
