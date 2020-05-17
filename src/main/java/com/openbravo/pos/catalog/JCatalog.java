@@ -431,6 +431,7 @@ public class JCatalog extends JPanel implements ListSelectionListener, CatalogSe
     }
     
     private class SelectedAction implements ActionListener {
+        
         private final ProductInfoExt prod;
         public SelectedAction(ProductInfoExt prod) {
             this.prod = prod;

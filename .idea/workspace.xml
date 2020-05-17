@@ -20,7 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a1f90d3-6b45-4a6e-a183-1c6e704855b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/catalog/JCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/catalog/JCatalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/forms/StartPOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/forms/StartPOS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/sales/JPanelTicket.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/sales/JPanelTicket.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/sales/JPanelTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/openbravo/pos/sales/JPanelTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/openbravo/pos/templates/Role.Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/openbravo/pos/templates/Role.Administrator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/openbravo/pos/templates/Ticket.Buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/openbravo/pos/templates/Ticket.Buttons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$CategoriesListModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$CategoriesListModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$SelectedAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$SelectedAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$SelectedCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$SelectedCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$SmallCategoryRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog$SmallCategoryRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/catalog/JCatalog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$ScriptArg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$ScriptArg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$ScriptObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket$ScriptObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/sales/JPanelTicket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/templates/Role.Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/templates/Role.Administrator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/openbravo/pos/templates/Ticket.Buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/openbravo/pos/templates/Ticket.Buttons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/com/openbravo/pos/templates/Role.Administrator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/reports/com/openbravo/pos/templates/Role.Administrator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reports/com/openbravo/pos/templates/Ticket.Buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/reports/com/openbravo/pos/templates/Ticket.Buttons.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,25 +164,25 @@
     </state>
     <state x="582" y="298" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587476402582" />
     <state x="582" y="302" width="735" height="527" key="FileChooserDialogImpl/0.32.1920.1048@0.32.1920.1048" timestamp="1584714202448" />
-    <state width="1874" height="195" key="GridCell.Tab.0.bottom" timestamp="1587032427421">
+    <state width="1874" height="194" key="GridCell.Tab.0.bottom" timestamp="1589618338617">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="195" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587032427421" />
+    <state width="1874" height="194" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1589618338617" />
     <state width="1874" height="274" key="GridCell.Tab.0.bottom/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062608" />
-    <state width="1874" height="195" key="GridCell.Tab.0.center" timestamp="1587032427419">
+    <state width="1874" height="194" key="GridCell.Tab.0.center" timestamp="1589618338616">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="195" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587032427419" />
+    <state width="1874" height="194" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1589618338616" />
     <state width="1874" height="274" key="GridCell.Tab.0.center/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062608" />
-    <state width="1874" height="195" key="GridCell.Tab.0.left" timestamp="1587032427419">
+    <state width="1874" height="194" key="GridCell.Tab.0.left" timestamp="1589618338616">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="195" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587032427419" />
+    <state width="1874" height="194" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1589618338616" />
     <state width="1874" height="274" key="GridCell.Tab.0.left/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062607" />
-    <state width="1874" height="195" key="GridCell.Tab.0.right" timestamp="1587032427420">
+    <state width="1874" height="194" key="GridCell.Tab.0.right" timestamp="1589618338617">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="195" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587032427420" />
+    <state width="1874" height="194" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1589618338617" />
     <state width="1874" height="274" key="GridCell.Tab.0.right/0.32.1920.1048@0.32.1920.1048" timestamp="1584762062608" />
     <state x="443" y="128" width="1024" height="852" key="SettingsEditor" timestamp="1586795966067">
       <screen x="0" y="27" width="1920" height="1053" />

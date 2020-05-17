@@ -2918,7 +2918,6 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
 
   private void m_jNumberKeysKeyPerformed(com.openbravo.beans.JNumberEvent evt) {//GEN-FIRST:event_m_jNumberKeysKeyPerformed
 
-    JOptionPane.showMessageDialog(null,"msg","msg",JOptionPane.INFORMATION_MESSAGE);
     stateTransition(evt.getKey());
 
     j_btnRemotePrt.setEnabled(true);

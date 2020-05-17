@@ -27,42 +27,45 @@
 <!-- Sales Ticket Button Bar - Show icons **************************************** -->
 
 	<!-- SET Sales Ticket Refund Item (Default=DISABLED) -->
-	<!-- <button key="button.refundit" image="img.refundit" code="script.Refundit"/> -->
+	<!-- <button key="button.refundit" image="refundit" code="script.Refundit"/> -->
 
 	<!-- SET Sales Ticket ServiceCharge (Default=DISABLED) -->
-	<!-- <button key="button.scharge" image="img.heart" code="script.ServiceCharge"/> -->
+	<!-- <button key="button.scharge" image="heart" code="script.ServiceCharge"/> -->
         
 	<!-- SET Sales line Note (Default=DISABLED) -->
-	<!-- <button key="button.note" image="img.refundit" code="script.addlinenote"/> -->        
+	<!-- <button key="button.note" image="refundit" code="script.addlinenote"/> -->        
                 
 	<!-- SET Line or Total Discount (Default=TotalDiscount= ENABLED) -->
-	<button key="button.Totaldiscount" image="img.discount" code="script.Totaldiscount"/>
-	<button key="button.Linediscount" image="img.discount_b" code="script.Linediscount"/>
+	<button key="button.totaldiscount" image="discount" code="script.totaldiscount"/>
+	<!-- <button key="button.linediscount" image="discount_b" code="script.linediscount"/>  -->
 
 	<!-- SET Waiter's name (Default=DISABLED) -->
-	<!-- <button key="button.setperson" image="img.user" code="script.SetPerson"/>  -->
+	<!-- <button key="button.setperson" image="user" code="script.SetPerson"/>  -->
 
 	<!-- SET Remote Printer (Default=DISABLED) --> 
-	<!-- <button key="button.sendorder" image="img.kit_print" code="script.SendOrder"/>  -->
+	<!-- <button key="button.sendorder" image="kit_print" code="script.SendOrder"/>  -->
 
 	<!-- SET Ticket Print Preview (Default=ENABLED) -->
-    	<button key="button.print" image="img.ticket_print" template="Printer.TicketPreview"/>
+    	<button key="button.print" image="ticket_print" template="Printer.TicketPreview"/>
 
 	<!-- SET Open Cashdrawer (Default=ENABLED) -->
-	<button key="button.opendrawer" image="img.cashdrawer" template="Printer.OpenDrawer"/>
+	<button key="button.opendrawer" image="cashdrawer" template="Printer.OpenDrawer"/>
 
 	<!-- Open posapps settings / configuration screen (Default=ENABLED) -->
-	<button key="button.posapps" image="img.posapps" code="script.posapps" />
+	<!-- <button key="button.posapps" image="img.posapps" code="script.posapps" /> -->
+	
+	<!-- apply script which replaces prices with resell prices -->
+	<button key="button.resell" image="run_script" code="script.applyResellPrices">	
 
 	<!-- SET Virtual Keyboard (Default=ENABLED) -->
-	<button key="button.keyboard" image="img.keyboard_48" code="script.Keyboard"/>
+	<button key="button.keyboard" image="keyboard_48" code="script.Keyboard"/>
 
 <!-- END Sales Ticket Button Bar - Show icons -->
 
 <!-- SET Ticket Button Bar - Text Only ****************************************************************** -->
 	<!-- <button key="button.refundit" name="button.refundit" code="script.Refundit"/> -->
-    	<!-- <button key="button.Linediscount" name="button.Linediscount" code="script.Linediscount"/> -->
-    	<!-- <button key="button.Totaldiscount" name="button.Totaldiscount" code="script.Totaldiscount"/> -->
+    	<!-- <button key="button.linediscount" name="button.linediscount" code="script.linediscount"/> -->
+    	<!-- <button key="button.discount" name="button.totaldiscount" code="script.totaldiscount"/> -->
     	<!-- <button key="button.setperson" name="button.setperson" code="script.SetPerson"/> -->
     	<!-- <button key="button.sendorder" name="button.sendorder" code="script.SendOrder"/> -->
     	<!-- <button key="button.print" titlekey="button.print" template="Printer.TicketPreview"/> -->
@@ -90,7 +93,11 @@
 	<!--  <img-height value="48"/> -->
 
 	<!-- Medium Product button size in Sales screen (Default=ENABLED) -->
-   	<img-width value="107"/>
+   	<!--<img-width value="107"/> -->
+	<!--<img-height value="60"/> -->
+
+	<!-- Custom Product button size -->
+   	<img-width value="300"/>
 	<img-height value="60"/>
     
 <!-- Large Product button size in Sales screen (Default=DISABLED)-->
@@ -101,25 +108,28 @@
 <!-- Print Receipt (Default=ENABLED) -->
         <printselected value="true"/>
 
-    <!-- ADDITIONAL FEATURES ************************************************* -->
+<!-- ADDITIONAL FEATURES ************************************************* -->
     <!-- SET Show Change in Cash Sale (Default=ENABLED -->
         <event key="ticket.close" code="Ticket.Close"/>
 	<event key="cash.close" code="Cash.Close"/>
 
-<!-- Execute your own scripts by EVENTS triggered by Sales Screen -->
-    <!--    <event key="ticket.change" code="script.YourChangeScript"/> after a ticketline is changed -->
-    <!--    <event key="ticket.addline" code="script.YourAddLineScript"/> before a ticketline is added -->
-    <!--    <event key="ticket.setline" code="script.YourSetLineScript"/> before an exisitng ticketline is changed -->
-    <!--    <event key="ticket.removeline" code="script.YourRemoveLineScript"/> before a ticketline is deleted -->
-    <!--    <event key="ticket.show" code="script.YourShowScript"/> before the receipt is shown -->
-    <!--    <event key="ticket.total" code="script.YourTotalScript"/> after the equals button -->
-    <!--    <event key="ticket.save" code="script.YourSaveScript"/> after payment OK button -->
-    <!--    <event key="ticket.close" code="script.YourCloseScript"/> after ticket is stored in database and ticket number assigned -->
+    <event key="ticket.removeline" code="ticket.removeline"/>
 
     <!-- posApps REST Customer Events -->
     <event key="customer.created" code="Customer.Created"/>
     <event key="customer.updated" code="Customer.Updated"/>
     <event key="customer.deleted" code="Customer.Deleted"/>
+
+        <!-- <event key="ticket.change" code="event.change"/> -->
+        <!-- <event key="ticket.addline" code="event.addline"/> -->
+        <!-- <event key="ticket.removeline" code="event.removeline"/> -->
+        <!-- <event key="ticket.setline" code="event.setline"/> -->
+        <!-- <event key="ticket.show" code="event.show"/> -->
+        <!-- <event key="ticket.total" code="script.Event.Total"/> -->
+        <!-- <event key="ticket.total" code="event.total"/> -->
+        <!-- <event key="ticket.close" code="event.close"/> -->
+        <!-- <event key="ticket.close" code="script.printreport"/> -->
+          <event key="ticket.total" code="script.printInvoice"/>
 
          <taxesincluded value="true"/>
          <taxcategoryid value="001"/>

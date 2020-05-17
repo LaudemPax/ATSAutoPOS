@@ -50,7 +50,7 @@ public class StartPOS {
     }
   }
 
-  public static void main(final String args[]) {
+  public static void main(String args[]) {
 
     SwingUtilities.invokeLater(() -> {
       if (!registerApp()) {

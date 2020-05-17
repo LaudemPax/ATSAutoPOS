@@ -75,6 +75,7 @@
     <class name="button.refundit"/>
     <class name="button.scharge"/>
     <class name="button.sendorder"/>
+    <class name="button.resell"/>
 
 <class name="com.openbravo.pos.forms.MenuCustomers"/>
     <class name="com.openbravo.pos.customers.CustomersPanel"/>
@@ -145,7 +146,9 @@
             <class name="/com/openbravo/reports/sales_saletaxes.bs"/>
             <class name="/com/openbravo/reports/sales_taxcatsales.bs"/>
             <class name="/com/openbravo/reports/sales_taxes.bs"/>
-                        
+             <class name="/com/openbravo/reports/usersales_summary.bs"/>
+            <class name="/com/openbravo/reports/usersales_mod.bs"/>
+
             <class name="/com/openbravo/reports/sales_chart_piesalescat.bs"/>
             <class name="/com/openbravo/reports/sales_chart_productsales.bs"/>                        
             <class name="/com/openbravo/reports/sales_chart_sales.bs"/>

@@ -1,0 +1,9 @@
+import javax.swing.JOptionPane;
+
+response = JOptionPane.showConfirmDialog(null,"Print Invoice?");
+
+//prints two copies
+if(response == 0){
+    sales.printTicket("Printer.Invoice_A4");
+    sales.printTicket("Printer.Invoice_A4");
+}
