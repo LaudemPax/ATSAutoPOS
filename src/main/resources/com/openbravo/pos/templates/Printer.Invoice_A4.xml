@@ -30,6 +30,15 @@
 	</line>
 	<line>
         <text align="left" length="20">$leftm Terminal: </text><text length="20">${ticket.getHost()}</text>
+        <text align="right" length="80">Please make cheques payable to ATS AUTO TECH SOLUTIONS</text>
+        
+            #if (${ticket.printTicketHeaderLine3()} != "")
+                <text align="right" length="90">$leftm</text>
+            #end
+	</line>
+        <line>
+        <text align="right" length="80">Bank details: Maybank Account No. 5621 0669 6922</text>
+        
             #if (${ticket.printTicketHeaderLine3()} != "")
                 <text align="right" length="90">$leftm</text>
             #end
@@ -160,8 +169,8 @@
     <line></line>
     <line></line>
 
-    <line><text align="left" length="90">$leftm I agree that the work done above has been</text></line>
-    <line><text align="left" length="90">$leftm completed to my satisfaction</text></line>
+    <line><text align="left" length="130">$leftm I agree that the work done / goods supplied above has been</text></line>
+    <line><text align="left" length="130">$leftm completed / delivered to my satisfaction</text></line>
     <line></line>
 
      <line>
