@@ -378,7 +378,7 @@
 				</reportElement>
 			</line>
 			<staticText>
-				<reportElement x="0" y="5" width="80" height="10" forecolor="#E2990C" uuid="f2a9c28c-0445-42ba-a1be-07f972e395c9">
+				<reportElement x="0" y="5" width="100" height="10" forecolor="#E2990C" uuid="f2a9c28c-0445-42ba-a1be-07f972e395c9">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -453,7 +453,7 @@
 				</reportElement>
 			</line>
 			<staticText>
-				<reportElement x="0" y="163" width="80" height="10" forecolor="#E2990C" uuid="d38220ff-04d5-4515-bba9-2313b078ec94">
+				<reportElement x="0" y="163" width="100" height="10" forecolor="#E2990C" uuid="d38220ff-04d5-4515-bba9-2313b078ec94">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -647,7 +647,7 @@
 				<text><![CDATA[Total order]]></text>
 			</staticText>
 			<line>
-				<reportElement x="5" y="10" width="555" height="1" forecolor="#838383" uuid="3fa3d84f-e41f-4580-9c45-e7ff827e1552">
+				<reportElement x="0" y="10" width="555" height="1" forecolor="#838383" uuid="3fa3d84f-e41f-4580-9c45-e7ff827e1552">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
