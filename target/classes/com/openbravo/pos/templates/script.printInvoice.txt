@@ -1,0 +1,9 @@
+import javax.swing.JOptionPane;
+
+response = JOptionPane.showConfirmDialog(null,"Print Invoice?");
+
+//prints two copies of the new Jasper Ticket
+if(response == 0){
+    sales.printJasperTicket("Printer.Jasper.Invoice_A4");
+    sales.printJasperTicket("Printer.Jasper.Invoice_A4");
+}

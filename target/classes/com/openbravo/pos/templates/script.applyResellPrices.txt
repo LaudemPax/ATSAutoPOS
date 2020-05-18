@@ -1,0 +1,36 @@
+//replaces all prices on sales screen with resell prices
+//defined by the property "resell"
+
+import com.openbravo.format.Formats;
+import com.openbravo.pos.ticket.TicketLineInfo;
+import com.openbravo.pos.ticket.TicketProductInfo; 
+import javax.swing.JOptionPane;
+import java.lang.NumberFormatException;
+
+if (ticket.getLinesCount() > 0) {
+    for (int number= 0; number < ticket.getLinesCount(); number++) {
+        line = ticket.getLine(number);
+        resellPrice = line.getProperty("resell", null);
+        if(resellPrice != null){
+            try{
+                resellPrice = Float.parseFloat(resellPrice);
+                ticket.setLine(number,
+                 new TicketLineInfo(
+                     line.getProductID(),
+                     line.getProductName() + " @ Resell",
+                     line.getProductTaxCategoryID(),
+                     line.getProductPrinter(),
+                     line.getMultiply(),
+                     resellPrice,
+                     line.getTaxInfo()));
+            }catch (NumberFormatException e){
+                JOptionPane.showMessageDialog(null, "Error converting property value to float for item:\n" + line.getProductName() + "\n\nPlease check if value entered in stock screen is correct", "Error",
+                    JOptionPane.PLAIN_MESSAGE);
+            }
+        } 
+    }
+} else {+ 
+    java.awt.Toolkit.getDefaultToolkit().beep();
+    JOptionPane.showMessageDialog(null, "No items in ticket", "Oops",
+        JOptionPane.PLAIN_MESSAGE);
+}

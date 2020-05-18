@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="invoice" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="TICKET" class="com.openbravo.pos.ticket.TicketInfo"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="invoice_id" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="productName" class="java.lang.String"/>
+	<field name="price" class="java.lang.String"/>
+	<field name="multiply" class="java.lang.String"/>
+	<field name="priceTax" class="java.lang.String"/>
+	<field name="taxRate" class="java.lang.String"/>
+	<field name="subValue" class="java.lang.String"/>
+	<field name="value" class="java.lang.String"/>
+	<field name="reference" class="java.lang.String"/>
+	<title>
+		<band height="120" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="60" width="160" height="10" uuid="57aed2b1-4f4e-40a3-a6ad-54dae8dd4c5a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATS Auto Tech Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="40" width="94" height="10" uuid="c4cb8d46-aa63-4633-a608-47116165db76"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Phone: +603-51312287]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="30" width="110" height="10" uuid="477895fc-1c44-4bac-8215-e276f658be84"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[www.atsauto.com.my]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="160" height="10" uuid="ed7fb44c-6465-4d85-b012-9d85f7687d50">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No.26, Jalan Biola 33/1, Shah Alam Technology Park,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="160" height="10" uuid="4543d20b-c86e-4117-a85c-808525347503">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[40400 Shah Alam, Selangor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="19" width="110" height="20" uuid="86e6ea14-6b48-4f16-9820-ab33f583cc02">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES INVOICE]]></text>
+			</staticText>
+			<textField evaluationTime="Master">
+				<reportElement x="255" y="40" width="112" height="11" forecolor="#838383" uuid="42f3ce19-e3f8-497e-a248-e0607b35d2b6"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page: " +$V{MASTER_CURRENT_PAGE} +  " / " +  $V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="255" y="50" width="300" height="1" forecolor="#838383" uuid="871df88b-9caa-42dc-b64a-af39fcc5f00c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="255" y="80" width="94" height="10" uuid="59570495-e3f3-40ee-90ae-8a275ac7736a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Server:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="60" width="94" height="10" uuid="8bb27734-5999-4aff-a900-bfb31fc92b7a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date ordered:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="70" width="94" height="10" uuid="d6590440-2577-4097-93b7-c1b1520bfdd2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terminal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="90" width="94" height="10" uuid="8bcf825b-154e-45d7-b7ce-2317d19a9993">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice id:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="5" width="119" height="50" uuid="a59df2a2-2d28-4740-8a2a-8582d68f65ee"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="390" y="20" width="170" height="20" uuid="84a42255-627c-4bd0-a6ab-9b3309ec7104"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$P{invoice_id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="61" width="170" height="10" uuid="996f8b2f-fdab-4535-a061-f16a58c53c22">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.printDate()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="71" width="170" height="10" uuid="94457e4b-7ee7-401e-8c01-d54f85150561">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.getHost()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="91" width="170" height="10" uuid="8564c239-2a02-4bee-8618-76efd3962705">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invoice_id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="81" width="170" height="10" uuid="3de26693-ac8c-4a71-a2ec-94c2cbe0aa25">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.printUser()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="58" height="10" uuid="610ee40b-933f-4c1f-b466-5bdb568bf022">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="58" y="100" width="100" height="10" uuid="fcb44418-c711-4810-98c9-cb5888d659e8">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.getCustomer().printName()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="110" width="58" height="10" uuid="715313f0-7484-46ce-a169-2fb6a8e3420f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="58" y="110" width="100" height="10" uuid="c672b056-9a7e-4ef5-9e6c-ea7feade1aa5">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.getCustomer().printPhone1()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="34">
+			<staticText>
+				<reportElement x="0" y="21" width="40" height="10" forecolor="#E2990C" uuid="180bd81b-0ca0-4b8b-b541-3a569b5d6c45">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reference]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="378" y="21" width="65" height="10" forecolor="#E2990C" uuid="ada8a6df-d2ea-4087-a487-2bc1ea94a81e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="21" width="42" height="10" forecolor="#E2990C" uuid="ab16f97b-19d4-4e58-8947-f7d7a3acb852"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="21" width="65" height="10" forecolor="#E2990C" uuid="9de1a2c8-4d52-44b7-9137-042e115f632a"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="21" width="80" height="10" forecolor="#E2990C" uuid="55f9f48f-609f-404e-b044-6415b680c7ad">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="11" width="555" height="1" forecolor="#838383" uuid="c749840f-8a37-4d99-a2b0-a56c1b38ed53">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15">
+			<textField>
+				<reportElement x="490" y="0" width="65" height="10" forecolor="#000000" uuid="dc3a7ddc-0041-4a70-a876-bfc3cecc6d96">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subValue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="378" y="0" width="65" height="10" forecolor="#000000" uuid="8d2a2716-2994-450f-986b-592cac561bb1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="6" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="42" height="10" forecolor="#000000" uuid="027fcdf1-f90c-467f-87cd-754665816cc0"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{multiply}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="292" height="10" uuid="ded9fe37-7fc4-486e-b737-0d99e07312fe"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="80" height="10" uuid="8ef432fa-b895-4826-a375-9a3aaacf6952"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="34">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" forecolor="#E2990C" uuid="a6151391-8f6d-4360-a6ad-434fb473f77f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="30" width="555" height="1" forecolor="#E2990C" uuid="01979d3d-b9c5-4b79-8661-9aa277b310da">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="5" width="100" height="10" forecolor="#E2990C" uuid="f2a9c28c-0445-42ba-a1be-07f972e395c9">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATS Auto Tech Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="110" height="10" forecolor="#E2990C" uuid="66ae7a07-4280-497d-a137-3009b0f51331">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.atsauto.com.my]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="5" width="80" height="10" forecolor="#E2990C" uuid="72f2e7f7-39e9-4c14-ba2d-6a1c79f44050">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel: +603-51312287]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="5" width="190" height="10" forecolor="#E2990C" uuid="c44d6892-6f6f-4c1f-98ec-da4aa344954a">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.26, Jalan Biola 33/1, Shah Alam Technology Park,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="15" width="146" height="10" forecolor="#E2990C" uuid="9e3e0bdc-fa95-4600-8758-e5a792eee864">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[40400 Shah Alam, Selangor]]></text>
+			</staticText>
+			<textField evaluationTime="Master">
+				<reportElement x="231" y="15" width="92" height="10" forecolor="#E2990C" uuid="0cb9edea-3d31-426c-a63a-1b110d104246">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page: " +$V{MASTER_CURRENT_PAGE} +  " / " +  $V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="190">
+			<line>
+				<reportElement x="0" y="158" width="555" height="1" forecolor="#E2990C" uuid="66cdcdd2-a374-4e04-97ce-715f95913c76">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="188" width="555" height="1" forecolor="#E2990C" uuid="9aa9d98e-a3f0-48b1-8385-e44f91b4a70b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="163" width="100" height="10" forecolor="#E2990C" uuid="d38220ff-04d5-4515-bba9-2313b078ec94">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATS Auto Tech Solutions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="173" width="110" height="10" forecolor="#E2990C" uuid="3ea161cb-e495-49b8-9ca3-20897f67f337">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[www.atsauto.com.my]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="163" width="80" height="10" forecolor="#E2990C" uuid="895bdb46-2a96-4b5d-ac9d-94c11b74e586">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel: +603-51312287]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="163" width="190" height="10" forecolor="#E2990C" uuid="b43651af-389f-4052-ba45-da85fa9a22b7">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.26, Jalan Biola 33/1, Shah Alam Technology Park,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="173" width="146" height="10" forecolor="#E2990C" uuid="c7cf3f24-2907-4d1a-92d3-ec62937bec45">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[40400 Shah Alam, Selangor]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="108" width="179" height="1" forecolor="#000000" uuid="6f6edda9-3356-47a4-a525-421ed926f29f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="376" y="108" width="179" height="1" forecolor="#000000" uuid="cf8258cf-1144-4a68-be37-130feae52c54">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="29" width="160" height="10" uuid="1281f236-801c-4639-8a60-556c9cdd26a1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="29" width="160" height="10" uuid="55016930-03bb-4108-898c-96fcf06b0fb6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Authorised Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="11" width="348" height="10" uuid="8ce309ac-44c6-4537-883f-58fde7c58812">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[I agree that the work done / goods supplied have been completed / delivered to my satisfaction]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="132" width="188" height="10" uuid="ab4792ec-147c-4227-a3d3-9bbcddfeb07c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Please make cheques payable to ATS AUTO TECH SOLUTIONS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="142" width="188" height="10" uuid="95066924-ab8a-4a24-8c54-3f34c883cfad">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bank details: Maybank account No. 5621 0669 6922]]></text>
+			</staticText>
+			<textField evaluationTime="Master">
+				<reportElement x="231" y="173" width="92" height="10" forecolor="#E2990C" uuid="fe584588-0a7a-4637-ba5c-dcb606125c71">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page: " +$V{MASTER_CURRENT_PAGE} +  " / " +  $V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="132">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="381" y="20" width="70" height="11" forecolor="#000000" uuid="32f1ddc8-d64b-4ad5-8959-de5d5c8dc258"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Subtotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="40" width="70" height="11" forecolor="#000000" uuid="caa7eea0-33ee-460c-a8d5-02ea6d9ee644">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tax]]></text>
+			</staticText>
+			<line>
+				<reportElement x="381" y="35" width="180" height="1" forecolor="#838383" uuid="32be8627-7b4b-4a28-ad66-3f03aa989b79">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="507" y="20" width="54" height="11" uuid="e3e554ca-e0fb-4de8-84b5-2f12c0d621a2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.printSubTotal()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="507" y="40" width="54" height="11" uuid="a893c050-1769-4b94-b6c9-b4f10ef1f878">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.printTax()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="381" y="55" width="180" height="1" forecolor="#000000" uuid="e6ecad01-6a60-43f0-964b-9adf04d10e25">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="507" y="60" width="54" height="11" uuid="408926e6-867d-4e4d-81e3-e2ad00380c5a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TICKET}.printTotal()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="60" width="70" height="11" forecolor="#000000" uuid="0b5143b3-dfc9-4adc-8323-351414241f60">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total order]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="10" width="555" height="1" forecolor="#838383" uuid="3fa3d84f-e41f-4580-9c45-e7ff827e1552">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

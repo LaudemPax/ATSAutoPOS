@@ -1,0 +1,47 @@
+// author: Muhammad Aman (aman.tifli@gmail.com)
+
+report = new com.openbravo.pos.reports.PanelReportBean();
+
+report.setTitleKey("Menu.UserSells");
+report.setReport("/com/openbravo/reports/usersales_mod");
+report.setResourceBundle("com/openbravo/reports/users_messages");
+
+report.setSentence("SELECT x.name AS NAME, x.xstartdate AS STARTDATE, x.xenddate AS ENDDATE, x.xtotal AS TOTAL, x.xticketid AS TICKETID, "
+	+ "SUM(ticketlines.UNITS * ticketlines.PRICE)-SUM(ticketlines.UNITS * products.PRICEBUY) "
+	+ "AS PROFITS "
+	+ "FROM (SELECT people.name, "
+	+ "receipts.DATENEW AS xSTARTDATE, receipts.DATENEW AS xENDDATE, "
+	+ "SUM(payments.total) AS xTOTAL, "
+	+ "tickets.ticketid AS xTICKETID, "
+	+ "payments.id AS xPAYMENTID, receipts.id AS xreceiptsid "
+	+ "FROM tickets tickets, people people, receipts receipts, payments payments "
+	+ "WHERE (tickets.person = people.id) AND (tickets.id = receipts.id) "
+	+ "AND (payments.receipt = receipts.id) "
+	+ "AND ?(QBF_FILTER)"
+	+ "GROUP BY tickets.ticketid) x "
+	+ "JOIN ticketlines ON x.xreceiptsid = ticketlines.ticket "
+	+ "JOIN products ON products.id = ticketlines.product "
+	+ "GROUP BY x.xticketid "
+	+ "ORDER BY x.name;"
+);
+
+
+report.addParameter("receipts.DATENEW");
+report.addParameter("receipts.DATENEW");
+paramdates = new com.openbravo.pos.reports.JParamsDatesInterval();
+paramdates.setStartDate(com.openbravo.beans.DateUtils.getToday());
+paramdates.setEndDate(com.openbravo.beans.DateUtils.getTodayMinutes());
+report.addQBFFilter(paramdates);
+
+report.addParameter("people.ID");
+report.addParameter("people.NAME");
+report.addQBFFilter(new com.openbravo.pos.reports.JParamsUser());
+
+report.addField("NAME", com.openbravo.data.loader.Datas.STRING);
+report.addField("STARTDATE", com.openbravo.data.loader.Datas.TIMESTAMP);
+report.addField("ENDDATE", com.openbravo.data.loader.Datas.TIMESTAMP);
+report.addField("TOTAL", com.openbravo.data.loader.Datas.DOUBLE);
+report.addField("TICKETID", com.openbravo.data.loader.Datas.STRING);
+report.addField("PROFITS", com.openbravo.data.loader.Datas.DOUBLE);
+
+report;
