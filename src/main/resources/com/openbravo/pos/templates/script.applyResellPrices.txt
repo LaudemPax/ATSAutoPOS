@@ -29,7 +29,7 @@ if (ticket.getLinesCount() > 0) {
             }
         } 
     }
-} else {+ 
+} else {
     java.awt.Toolkit.getDefaultToolkit().beep();
     JOptionPane.showMessageDialog(null, "No items in ticket", "Oops",
         JOptionPane.PLAIN_MESSAGE);
