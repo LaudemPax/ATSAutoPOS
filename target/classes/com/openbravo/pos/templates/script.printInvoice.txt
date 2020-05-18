@@ -4,10 +4,9 @@ response = JOptionPane.showConfirmDialog(null,"Print Invoice?");
 
 if(ticket.getLinesCount() > 0){
 
-//prints two copies of the new Jasper Ticket
+    //prints two copies of the new Jasper Ticket
     if(response == 0){
-        sales.printJasperTicket("Printer.Jasper.Invoice_A4");
-        sales.printJasperTicket("Printer.Jasper.Invoice_A4");
+        sales.printJasperTicket("Printer.Jasper.Invoice_A4", true);
     }
 
 }else{

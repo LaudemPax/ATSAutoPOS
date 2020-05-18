@@ -1996,7 +1996,7 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
     clock.start();
   }
   
-  private void printJasperTicket(String resourceName, TicketInfo ticket){
+  private void printJasperTicket(String resourceName, TicketInfo ticket, boolean doublePrint){
 
     //debug
     for(int i = 0; i <  ticket.getLinesCount(); i++){
@@ -2017,16 +2017,15 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
 
       if(ticket.getLinesCount() < 1){
         java.awt.Toolkit.getDefaultToolkit().beep();
+        JOptionPane.showMessageDialog(null, "Cannot print empty ticket!");
         return;
       }
 
       java.util.List<TicketLineInfoBean> lines = new ArrayList<>();
 
       for(int i = 0; i < ticket.getLinesCount(); i++){
-        if("".equals(ticket.getLine(i).getProperty("isDiscountLine", ""))) {
           TicketLineInfoBean bean = new TicketLineInfoBean(ticket.getLine(i));
           lines.add(bean);
-        }
       }
 
       JRBeanCollectionDataSource ticketlines = new JRBeanCollectionDataSource(lines);
@@ -2050,6 +2049,24 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
       PrintService service = ReportUtils.getPrintService(m_App.getProperties().getProperty("machine.printername"));
 
       JRPrinterAWT300.printPages(jp, 0, jp.getPages().size() - 1, service);
+      
+        //print again with the same id
+        if (doublePrint) {
+            
+            //must be filled again  because garbage collector got rid of the data
+            java.util.List<TicketLineInfoBean> lines_2 = new ArrayList<>();
+
+            for (int i = 0; i < ticket.getLinesCount(); i++) {
+                    TicketLineInfoBean bean = new TicketLineInfoBean(ticket.getLine(i));
+                    lines_2.add(bean);
+            }
+
+            JRBeanCollectionDataSource ticketlines_2 = new JRBeanCollectionDataSource(lines_2);
+            
+             jp = JasperFillManager.fillReport(jr, reportparams, ticketlines_2);
+             
+             JRPrinterAWT300.printPages(jp, 0, jp.getPages().size() - 1, service);
+        }
 
     } catch (JRException e) {
       MessageInf msg = new MessageInf(MessageInf.SGN_WARNING, AppLocal.getIntString("message.cannotloadreport"), e);
@@ -2363,8 +2380,8 @@ public abstract class JPanelTicket extends JPanel implements JPanelView, BeanFac
     }
     
     //custom script method to print Jasper Invoice
-    public void printJasperTicket(String resourcefile){
-        JPanelTicket.this.printJasperTicket(resourcefile, ticket);
+    public void printJasperTicket(String resourcefile, boolean doublePrint){
+        JPanelTicket.this.printJasperTicket(resourcefile, ticket, doublePrint);
     }
     
     /**
