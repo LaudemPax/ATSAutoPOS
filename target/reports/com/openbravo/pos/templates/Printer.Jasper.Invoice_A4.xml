@@ -268,7 +268,7 @@
 	<columnHeader>
 		<band height="34">
 			<staticText>
-				<reportElement x="0" y="21" width="40" height="10" forecolor="#E2990C" uuid="180bd81b-0ca0-4b8b-b541-3a569b5d6c45">
+				<reportElement x="0" y="21" width="40" height="10" forecolor="#000000" uuid="180bd81b-0ca0-4b8b-b541-3a569b5d6c45">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left">
@@ -277,7 +277,7 @@
 				<text><![CDATA[Reference]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="378" y="21" width="65" height="10" forecolor="#E2990C" uuid="ada8a6df-d2ea-4087-a487-2bc1ea94a81e">
+				<reportElement x="378" y="21" width="65" height="10" forecolor="#000000" uuid="ada8a6df-d2ea-4087-a487-2bc1ea94a81e">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -287,21 +287,21 @@
 				<text><![CDATA[Price]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="445" y="21" width="42" height="10" forecolor="#E2990C" uuid="ab16f97b-19d4-4e58-8947-f7d7a3acb852"/>
+				<reportElement x="445" y="21" width="42" height="10" forecolor="#000000" uuid="ab16f97b-19d4-4e58-8947-f7d7a3acb852"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Qty]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="490" y="21" width="65" height="10" forecolor="#E2990C" uuid="9de1a2c8-4d52-44b7-9137-042e115f632a"/>
+				<reportElement x="490" y="21" width="65" height="10" forecolor="#000000" uuid="9de1a2c8-4d52-44b7-9137-042e115f632a"/>
 				<textElement textAlignment="Right">
 					<font size="6" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Value]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="80" y="21" width="80" height="10" forecolor="#E2990C" uuid="55f9f48f-609f-404e-b044-6415b680c7ad">
+				<reportElement x="80" y="21" width="80" height="10" forecolor="#000000" uuid="55f9f48f-609f-404e-b044-6415b680c7ad">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left">
@@ -364,21 +364,21 @@
 	<pageFooter>
 		<band height="34">
 			<line>
-				<reportElement x="0" y="0" width="555" height="1" forecolor="#E2990C" uuid="a6151391-8f6d-4360-a6ad-434fb473f77f">
+				<reportElement x="0" y="0" width="555" height="1" forecolor="#838383" uuid="a6151391-8f6d-4360-a6ad-434fb473f77f">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</line>
 			<line>
-				<reportElement x="0" y="30" width="555" height="1" forecolor="#E2990C" uuid="01979d3d-b9c5-4b79-8661-9aa277b310da">
+				<reportElement x="0" y="30" width="555" height="1" forecolor="#838383" uuid="01979d3d-b9c5-4b79-8661-9aa277b310da">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</line>
 			<staticText>
-				<reportElement x="0" y="5" width="100" height="10" forecolor="#E2990C" uuid="f2a9c28c-0445-42ba-a1be-07f972e395c9">
+				<reportElement x="0" y="5" width="100" height="10" forecolor="#838383" uuid="f2a9c28c-0445-42ba-a1be-07f972e395c9">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -387,7 +387,7 @@
 				<text><![CDATA[ATS Auto Tech Solutions]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="15" width="110" height="10" forecolor="#E2990C" uuid="66ae7a07-4280-497d-a137-3009b0f51331">
+				<reportElement x="0" y="15" width="110" height="10" forecolor="#838383" uuid="66ae7a07-4280-497d-a137-3009b0f51331">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -396,7 +396,7 @@
 				<text><![CDATA[www.atsauto.com.my]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="237" y="5" width="80" height="10" forecolor="#E2990C" uuid="72f2e7f7-39e9-4c14-ba2d-6a1c79f44050">
+				<reportElement x="237" y="5" width="80" height="10" forecolor="#838383" uuid="72f2e7f7-39e9-4c14-ba2d-6a1c79f44050">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -405,7 +405,7 @@
 				<text><![CDATA[Tel: +603-51312287]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="365" y="5" width="190" height="10" forecolor="#E2990C" uuid="c44d6892-6f6f-4c1f-98ec-da4aa344954a">
+				<reportElement x="365" y="5" width="190" height="10" forecolor="#838383" uuid="c44d6892-6f6f-4c1f-98ec-da4aa344954a">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -414,7 +414,7 @@
 				<text><![CDATA[No.26, Jalan Biola 33/1, Shah Alam Technology Park,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="410" y="15" width="146" height="10" forecolor="#E2990C" uuid="9e3e0bdc-fa95-4600-8758-e5a792eee864">
+				<reportElement x="410" y="15" width="146" height="10" forecolor="#838383" uuid="9e3e0bdc-fa95-4600-8758-e5a792eee864">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -423,7 +423,7 @@
 				<text><![CDATA[40400 Shah Alam, Selangor]]></text>
 			</staticText>
 			<textField evaluationTime="Master">
-				<reportElement x="231" y="15" width="92" height="10" forecolor="#E2990C" uuid="0cb9edea-3d31-426c-a63a-1b110d104246">
+				<reportElement x="231" y="15" width="92" height="10" forecolor="#838383" uuid="0cb9edea-3d31-426c-a63a-1b110d104246">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -439,21 +439,21 @@
 	<lastPageFooter>
 		<band height="190">
 			<line>
-				<reportElement x="0" y="158" width="555" height="1" forecolor="#E2990C" uuid="66cdcdd2-a374-4e04-97ce-715f95913c76">
+				<reportElement x="0" y="158" width="555" height="1" forecolor="#838383" uuid="66cdcdd2-a374-4e04-97ce-715f95913c76">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</line>
 			<line>
-				<reportElement x="0" y="188" width="555" height="1" forecolor="#E2990C" uuid="9aa9d98e-a3f0-48b1-8385-e44f91b4a70b">
+				<reportElement x="0" y="188" width="555" height="1" forecolor="#838383" uuid="9aa9d98e-a3f0-48b1-8385-e44f91b4a70b">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</line>
 			<staticText>
-				<reportElement x="0" y="163" width="100" height="10" forecolor="#E2990C" uuid="d38220ff-04d5-4515-bba9-2313b078ec94">
+				<reportElement x="0" y="163" width="100" height="10" forecolor="#838383" uuid="d38220ff-04d5-4515-bba9-2313b078ec94">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -462,7 +462,7 @@
 				<text><![CDATA[ATS Auto Tech Solutions]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="173" width="110" height="10" forecolor="#E2990C" uuid="3ea161cb-e495-49b8-9ca3-20897f67f337">
+				<reportElement x="0" y="173" width="110" height="10" forecolor="#838383" uuid="3ea161cb-e495-49b8-9ca3-20897f67f337">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement>
@@ -471,7 +471,7 @@
 				<text><![CDATA[www.atsauto.com.my]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="237" y="163" width="80" height="10" forecolor="#E2990C" uuid="895bdb46-2a96-4b5d-ac9d-94c11b74e586">
+				<reportElement x="237" y="163" width="80" height="10" forecolor="#838383" uuid="895bdb46-2a96-4b5d-ac9d-94c11b74e586">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center">
@@ -480,7 +480,7 @@
 				<text><![CDATA[Tel: +603-51312287]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="365" y="163" width="190" height="10" forecolor="#E2990C" uuid="b43651af-389f-4052-ba45-da85fa9a22b7">
+				<reportElement x="365" y="163" width="190" height="10" forecolor="#838383" uuid="b43651af-389f-4052-ba45-da85fa9a22b7">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -489,7 +489,7 @@
 				<text><![CDATA[No.26, Jalan Biola 33/1, Shah Alam Technology Park,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="410" y="173" width="146" height="10" forecolor="#E2990C" uuid="c7cf3f24-2907-4d1a-92d3-ec62937bec45">
+				<reportElement x="410" y="173" width="146" height="10" forecolor="#838383" uuid="c7cf3f24-2907-4d1a-92d3-ec62937bec45">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -562,7 +562,7 @@
 				<text><![CDATA[Bank details: Maybank account No. 5621 0669 6922]]></text>
 			</staticText>
 			<textField evaluationTime="Master">
-				<reportElement x="231" y="173" width="92" height="10" forecolor="#E2990C" uuid="fe584588-0a7a-4637-ba5c-dcb606125c71">
+				<reportElement x="231" y="173" width="92" height="10" forecolor="#838383" uuid="fe584588-0a7a-4637-ba5c-dcb606125c71">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
