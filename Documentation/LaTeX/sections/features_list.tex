@@ -1,0 +1,35 @@
+\section{Features}
+
+\subsection{New Reports}
+
+ATS Auto POS comes with custom made reports which were not provided by the base Unicenta oPOS software.
+
+\subsubsection{Sales by user}
+
+The base "Sales by user" report but sorted by user for better readability. The \textbf{development files} associated with this report are \textit{usersales\_mod.bs} and \textit{usersales\_mod.jrxml}
+
+\subsubsection{User Sales Summary}
+
+Total sales of each user. The \textbf{development files} associated with this report are \textit{usersales\_summary.bs} and \textit{usersales\_summary.jrxml}
+
+\subsubsection{Dev Notes}
+
+\textbf{Dev: } String definitions for the titles shown on the buttons in the sales reports screen are stored in \textit{src/main/resources/pos\_messages.properties}
+
+\subsection{Customized Receipt}
+
+Receipt or "Ticket" has been customized to better represent ATS Auto Tech Solutions and its business transactions. Some changes were as follows:-
+
+\begin{enumerate}
+	\item Removed unnecessary columns to allow longer item names
+	
+	\item changed details to reflect business
+\end{enumerate}
+
+\subsection{Jasper Based Invoice Generation}
+
+Clean and professional invoice generation powered by Jasper Reports. Invoice JRXML definition can be found in Resources under \textit{Printer.Jasper.Invoice\_A4} and the logo used under \textit{Printer.Invoice.Logo}. Two copies of the invoice are printed when the "=" is pressed but \textbf{before} a sale is completed.
+
+\subsection{Resell Prices System}
+
+Changes all prices on the sales screen with predefined "Resell prices".
