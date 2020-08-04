@@ -1,20 +1,35 @@
-\section{Features}
+\chapter{Features}
+
+\section{New Features}
+
+New features on top of unicenta oPOS 4.6.2
 
 \subsection{New Reports}
 
 ATS Auto POS comes with custom made reports which were not provided by the base Unicenta oPOS software.
 
-\subsubsection{Sales by user}
-
+\begin{enumerate}
+	\item \hyperref[sec:salesbyuser]{Sales by User}
+	\item \hyperref[sec:usersalessummary]{User Sales Summary}
+\end{enumerate}
+\subsubsection{Report: Sales by user}
+\label{sec:salesbyuser}
 The base "Sales by user" report but sorted by user for better readability. The \textbf{development files} associated with this report are \textit{usersales\_mod.bs} and \textit{usersales\_mod.jrxml}
 
-\subsubsection{User Sales Summary}
-
+\subsubsection{Report: User Sales Summary}
+\label{sec:usersalessummary}
 Total sales of each user. The \textbf{development files} associated with this report are \textit{usersales\_summary.bs} and \textit{usersales\_summary.jrxml}
 
 \subsubsection{Dev Notes}
 
 \textbf{Dev: } String definitions for the titles shown on the buttons in the sales reports screen are stored in \textit{src/main/resources/pos\_messages.properties}
+
+\newpage
+
+\subsection{Jasper Based Invoice Generation}
+
+Clean and professional invoice generation powered by Jasper Reports. Invoice JRXML definition can be found in Resources under \textit{Printer.Jasper.Invoice\_A4} and the logo used under \textit{Printer.Invoice.Logo}. Two copies of the invoice are printed when the "=" is pressed but \textbf{before} a sale is completed.
+
 
 \subsection{Customized Receipt}
 
@@ -26,9 +41,7 @@ Receipt or "Ticket" has been customized to better represent ATS Auto Tech Soluti
 	\item changed details to reflect business
 \end{enumerate}
 
-\subsection{Jasper Based Invoice Generation}
 
-Clean and professional invoice generation powered by Jasper Reports. Invoice JRXML definition can be found in Resources under \textit{Printer.Jasper.Invoice\_A4} and the logo used under \textit{Printer.Invoice.Logo}. Two copies of the invoice are printed when the "=" is pressed but \textbf{before} a sale is completed.
 
 \subsection{Resell Prices System}
 
