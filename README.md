@@ -1,6 +1,6 @@
 # ATS Auto POS
 
-Customized [Unicenta POS](https://unicenta.com/) for the company ATS Auto https://atsauto.com.my/
+Customized [Unicenta POS](https://unicenta.com/) for the company [ATS Auto](https://atsauto.com.my/)
 
 ## Documentation
 
