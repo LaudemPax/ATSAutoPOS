@@ -1,0 +1,35 @@
+\documentclass[oneside]{memoir}
+
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{titling}
+
+\lstset{ % General setup for the package
+	language=XML,
+	basicstyle=\small\sffamily,
+	numbers=left,
+	numberstyle=\tiny,
+	frame=tb,
+	tabsize=4,
+	columns=fixed,
+	showstringspaces=false,
+	showtabs=false,
+	keepspaces
+}
+
+% Title Page
+\title{ATS Auto POS Documentation}
+\author{Muhammad Aman}
+
+
+
+
+\begin{document}
+
+\include{sections/coverpage}
+\include{sections/intro}
+\include{sections/features_list}
+\include{sections/resell_prices_system}
+
+\end{document}          
