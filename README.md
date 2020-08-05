@@ -12,4 +12,4 @@ See included [PDF](https://github.com/LaudemPax/ATSAutoPOS/blob/dev/Documentatio
 
 ## License
 
-This project is licensed under the GNU GPL3 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL3 License - see the [LICENSE.md](https://github.com/LaudemPax/ATSAutoPOS/blob/master/LICENSE) file for details
