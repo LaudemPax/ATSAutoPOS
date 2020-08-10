@@ -4,7 +4,7 @@ Customized [Unicenta POS](https://unicenta.com/) for the company [ATS Auto](http
 
 ## Documentation
 
-See included [PDF](https://github.com/LaudemPax/ATSAutoPOS/blob/dev/Documentation/ATS%20Auto%20POS%20Documentation.pdf)
+See included [PDF](https://github.com/LaudemPax/ATSAutoPOS/blob/master/Documentation/ATS%20Auto%20POS%20Documentation.pdf)
 
 ## Authors
 
